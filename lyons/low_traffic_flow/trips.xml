@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-02-11 20:37:15.246525 by randomTrips.py v1_22_0+0087-91b2b3c2d6e
+<configuration>
+    <net-file value="lyons_new.net.xml"/>
+    <output-trip-file value="trips.xml"/>
+    <route-file value="routes.rou.xml"/>
+    <end value="600.0"/>
+    <period value="0.5"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <trip id="0" depart="0.00" from="14025398#4" to="-14019571#3"/>
+    <trip id="1" depart="0.50" from="-14026436" to="-14026251#1"/>
+    <trip id="2" depart="1.00" from="14026326#2" to="14026019#1"/>
+    <trip id="3" depart="1.50" from="682553774#2" to="-14024835#2"/>
+    <trip id="4" depart="2.00" from="-683043814#4" to="-14019622#1"/>
+    <trip id="5" depart="2.50" from="-14026096#9" to="14019571#3"/>
+    <trip id="6" depart="3.00" from="-14019622#0" to="-14026096#3"/>
+    <trip id="7" depart="3.50" from="14025708#1" to="14024684#7"/>
+    <trip id="8" depart="4.00" from="-14026100#0" to="14025159#5"/>
+    <trip id="9" depart="4.50" from="14027172#2" to="-14019569#3"/>
+    <trip id="10" depart="5.00" from="14027172#0" to="14026096#7"/>
+    <trip id="11" depart="5.50" from="-14027562#2" to="-14025708#0"/>
+    <trip id="12" depart="6.00" from="683047943#1" to="-14027562#4"/>
+    <trip id="13" depart="6.50" from="-14024835#4" to="-14025159#2"/>
+    <trip id="14" depart="7.00" from="625743596" to="14025222#10"/>
+    <trip id="15" depart="7.50" from="14027172#0" to="14026251#9"/>
+    <trip id="16" depart="8.00" from="14024684#0" to="683047946#6"/>
+    <trip id="17" depart="8.50" from="-682551442#7" to="14024694#1"/>
+    <trip id="18" depart="9.00" from="14027562#4" to="14025222#6"/>
+    <trip id="19" depart="9.50" from="682551442#2" to="14024875"/>
+    <trip id="20" depart="10.00" from="14026100#0" to="-14024684#0"/>
+    <trip id="21" depart="10.50" from="-14026100#4" to="-14026504#9"/>
+    <trip id="22" depart="11.00" from="-14024710#1" to="-14026251#6"/>
+    <trip id="23" depart="11.50" from="-14025159#3" to="-14026504#3"/>
+    <trip id="24" depart="12.00" from="14025398#2" to="-682551442#4"/>
+    <trip id="25" depart="12.50" from="-682551442#3" to="-14026096#9"/>
+    <trip id="26" depart="13.00" from="-14026336#6" to="683044783#1"/>
+    <trip id="27" depart="13.50" from="14025708#0" to="14025222#13"/>
+    <trip id="28" depart="14.00" from="-14025894#0" to="14026251#9"/>
+    <trip id="29" depart="14.50" from="-14025708#0" to="-682551445#2"/>
+    <trip id="30" depart="15.00" from="683056203" to="14025532"/>
+    <trip id="31" depart="15.50" from="14024694#0" to="14026096#0"/>
+    <trip id="32" depart="16.00" from="625743593" to="14026504#7"/>
+    <trip id="33" depart="16.50" from="-14026251#0" to="-14019623"/>
+    <trip id="34" depart="17.00" from="-14026937#1" to="-14026436"/>
+    <trip id="35" depart="17.50" from="-14026096#5" to="683044783#4"/>
+    <trip id="36" depart="18.00" from="682551442#9" to="-14027172#0"/>
+    <trip id="37" depart="18.50" from="14025894#1" to="-682553779#0"/>
+    <trip id="38" depart="19.00" from="682553786" to="-683047946#7"/>
+    <trip id="39" depart="19.50" from="-14026336#5" to="-14026326#2"/>
+    <trip id="40" depart="20.00" from="14024696#0" to="-14026336#8"/>
+    <trip id="41" depart="20.50" from="14025159#0" to="682553777#1"/>
+    <trip id="42" depart="21.00" from="-682553774#2" to="-14026100#4"/>
+    <trip id="43" depart="21.50" from="683270320" to="14019622#1"/>
+    <trip id="44" depart="22.00" from="-14024835#3" to="-14024684#1"/>
+    <trip id="45" depart="22.50" from="-14025159#7" to="14025386#1"/>
+    <trip id="46" depart="23.00" from="14026768#1" to="-683044783#1"/>
+    <trip id="47" depart="23.50" from="-14024684#7" to="-682551446#0"/>
+    <trip id="48" depart="24.00" from="683270315" to="14024684#0"/>
+    <trip id="49" depart="24.50" from="683047946#5" to="682551442#14"/>
+    <trip id="50" depart="25.00" from="-14019569#6" to="14026251#4"/>
+</routes>
