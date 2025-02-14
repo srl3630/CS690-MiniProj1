@@ -6,7 +6,6 @@
 	</input>
 	 <output>
         <tripinfo-output value="tripinfo.xml"/>
-		<<fcd-output value="fcd.xml"/>
     </output>
 </configuration>
 
