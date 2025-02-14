@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-02-14 15:45:36 by Eclipse SUMO netedit Version 1.22.0
+<!-- generated on 2025-02-14 15:43:06 by Eclipse SUMO netedit Version 1.22.0
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
-        <sumocfg-file value="C:\Users\pukar\OneDrive\Desktop\Sumo Repos\CS690MiniProj1\CS690-MiniProj1\lyons\PM\simple.sumocfg"/>
-        <additional-files value="C:\Users\pukar\OneDrive\Desktop\Sumo Repos\CS690MiniProj1\CS690-MiniProj1\lyons\PM\detectors.add.xml"/>
-        <route-files value="C:\Users\pukar\OneDrive\Desktop\Sumo Repos\CS690MiniProj1\CS690-MiniProj1\lyons\PM\lyons_PM.rou.xml"/>
-        <sumo-net-file value="C:\Users\pukar\OneDrive\Desktop\Sumo Repos\CS690MiniProj1\CS690-MiniProj1\lyons\PM\lyons.net.xml"/>
+        <sumo-net-file value="C:\Users\jones\Documents\GMU\Spring 2025\CS690\Projects\CS690-MiniProj1\lyons\AM\Networks\lyon_AM_90_NSA.net.xml"/>
     </input>
 
     <output>
-        <output-file value="C:\Users\pukar\OneDrive\Desktop\Sumo Repos\CS690MiniProj1\CS690-MiniProj1\lyons\PM\lyons.net.xml"/>
+        <output-file value="C:\Users\jones\Documents\GMU\Spring 2025\CS690\Projects\CS690-MiniProj1\lyons\AM\Networks\lyon_AM_90_NSA.net.xml"/>
     </output>
 
     <processing>
@@ -31,10 +28,6 @@
     <pedestrian>
         <walkingareas value="0"/>
     </pedestrian>
-
-    <netedit>
-        <ignore.routeelements value="false"/>
-    </netedit>
 
 </neteditConfiguration>
 -->
@@ -10392,16 +10385,16 @@
         <lane id="980791080_0" index="0" allow="pedestrian delivery bicycle" speed="5.56" length="47.44" shape="1639.63,9813.31 1639.84,9826.97 1638.80,9842.31 1636.60,9851.05 1631.96,9859.21"/>
     </edge>
 
-    <tlLogic id="133123137" type="actuated" programID="0" offset="0">
-        <phase duration="32" state="rrrrGGggrrrrGGgg" minDur="5" maxDur="50"/>
+    <tlLogic id="133123137" type="static" programID="0" offset="0">
+        <phase duration="42" state="rrrrGGggrrrrGGgg"/>
         <phase duration="3"  state="rrrryyyyrrrryyyy"/>
-        <phase duration="32" state="GGggrrrrGGggrrrr" minDur="5" maxDur="50"/>
+        <phase duration="42" state="GGggrrrrGGggrrrr"/>
         <phase duration="3"  state="yyyyrrrryyyyrrrr"/>
     </tlLogic>
-    <tlLogic id="133123142" type="actuated" programID="0" offset="0">
-        <phase duration="32" state="rrrrGGggrrrrGGgg" minDur="5" maxDur="50"/>
+    <tlLogic id="133123142" type="static" programID="0" offset="0">
+        <phase duration="42" state="rrrrGGggrrrrGGgg"/>
         <phase duration="3"  state="rrrryyyyrrrryyyy"/>
-        <phase duration="32" state="GGggrrrrGGggrrrr" minDur="5" maxDur="50"/>
+        <phase duration="42" state="GGggrrrrGGggrrrr"/>
         <phase duration="3"  state="yyyyrrrryyyyrrrr"/>
     </tlLogic>
 
