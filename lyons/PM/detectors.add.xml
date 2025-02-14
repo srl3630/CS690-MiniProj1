@@ -1,0 +1,17 @@
+<additional>
+    <!-- Northbound detectors -->
+    <inductionLoop id="nb_1" lane="-14026336#4_0" pos="35" freq="60" file="detector_output.xml"/>
+    <inductionLoop id="nb_2" lane="-14026336#3_0" pos="35" freq="60" file="detector_output.xml"/>
+
+    <!-- Southbound detectors -->
+    <inductionLoop id="sb_1" lane="14026336#3_0" pos="35" freq="60" file="detector_output.xml"/>
+    <inductionLoop id="sb_2" lane="14026336#4_0" pos="35" freq="60" file="detector_output.xml"/>
+
+    <!-- Eastbound detectors -->
+    <inductionLoop id="eb_1" lane="683047946#5_0" pos="95" freq="60" file="detector_output.xml"/>
+    <inductionLoop id="eb_2" lane="683047946#6_0" pos="95" freq="60" file="detector_output.xml"/>
+
+    <!-- Westbound detectors -->
+    <inductionLoop id="wb_1" lane="-683047946#6_0" pos="95" freq="60" file="detector_output.xml"/>
+    <inductionLoop id="wb_2" lane="-683047946#5_0" pos="95" freq="60" file="detector_output.xml"/>
+</additional>
