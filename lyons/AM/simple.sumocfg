@@ -1,6 +1,6 @@
 <configuration>
 	<input>
-		<net-file value="lyons.net.xml"/>
+		<net-file value="lyons_110_static.net.xml"/>
 		<route-files value="lyons_AM.rou.xml"/>
 		<additional-files value="detectors.add.xml"/>
 	</input>

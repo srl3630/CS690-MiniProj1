@@ -92,7 +92,7 @@ def parse_detector_output(file):
 def extract_and_save_traffic_data():
     detector_file = "detector_output.xml"
     tripinfo_file = "tripinfo.xml"
-    output_csv = "traffic_data.csv"
+    output_csv = "AM_110_static.csv"
 
     if not os.path.exists(detector_file) or not os.path.exists(tripinfo_file):
         print("Error: Required output files not found. Run the SUMO simulation first.")
