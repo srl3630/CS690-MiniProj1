@@ -1,0 +1,5 @@
+Direction,Average Flow Rate (veh/hr),Average Density (veh/km),Average Inter-Vehicular Distance (m)
+Northbound,25.0,1.2859523809523807,0
+Southbound,35.0,1.4065476190476187,0
+Eastbound,82.85714285714286,0.24986893840104846,0
+Westbound,96.42857142857143,0.20150720838794237,0

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<detector-configurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/detdefinitions.xsd">
+    <inductionLoop id="northbound_lane1_detector" lane="-14026336#4_0" pos="-10" freq="60" file="northbound_output.xml"/>
+    <inductionLoop id="northbound_lane2_detector" lane="-14026336#3_0" pos="-10" freq="60" file="northbound_output.xml"/>
+
+    <inductionLoop id="southbound_lane1_detector" lane="14026336#3_0" pos="-10" freq="60" file="southbound_output.xml"/>
+    <inductionLoop id="southbound_lane2_detector" lane="14026336#4_0" pos="-10" freq="60" file="southbound_output.xml"/>
+
+    <inductionLoop id="eastbound_lane1_detector" lane="683047946#5_0" pos="-10" freq="60" file="eastbound_output.xml"/>
+    <inductionLoop id="eastbound_lane2_detector" lane="683047946#6_0" pos="-10" freq="60" file="eastbound_output.xml"/>
+   
+    <inductionLoop id="westbound_lane1_detector" lane="-683047946#6_0" pos="-10" freq="60" file="westbound_output.xml"/>
+    <inductionLoop id="westbound_lane2_detector" lane="-683047946#5_0" pos="-10" freq="60" file="westbound_output.xml"/>
+</detector-configurations>

@@ -4,18 +4,18 @@ import csv
 
 # Define the lanes for each direction
 LANE_GROUPS = {
-    "Northbound": ["-14026336#4_0", "-14026336#3_0"],
-    "Southbound": ["14026336#3_0", "14026336#4_0"],
-    "Eastbound": ["683047946#5_0", "683047946#6_0"],
-    "Westbound": ["-683047946#6_0", "-683047946#5_0"]
+    "Northbound": ["nb_1", "nb_2"],
+    "Southbound": ["sb_1", "sb_2"],
+    "Eastbound": ["eb_1", "eb_2"],
+    "Westbound": ["wb_1", "wb_2"]
 }
 
 # Lane lengths (to calculate density properly)
 LANE_LENGTHS = {
-    "-14026336#4_0": 40, "-14026336#3_0": 40,
-    "14026336#3_0": 40, "14026336#4_0": 40,
-    "683047946#5_0": 109, "683047946#6_0": 109,
-    "-683047946#6_0": 109, "-683047946#5_0": 109
+    "nb_1": 40, "nb_2": 40,
+    "sb_1": 40, "sb_2": 40,
+    "eb_1": 109, "eb_2": 109,
+    "wb_1": 109, "wb_2": 109
 }
 
 def parse_detector_output(file):
@@ -29,20 +29,24 @@ def parse_detector_output(file):
     for interval in root.findall("interval"):
         for lane in LANE_GROUPS:
             for lane_id in LANE_GROUPS[lane]:
-                loop_data = interval.find(f".//*[@id='{lane_id}']")
-                if loop_data is not None:
-                    flow = float(loop_data.get("flow", 0))
-                    occupancy = float(loop_data.get("occupancy", 0))
-                    
-                    # Convert occupancy (%) to vehicle density (vehicles/km)
-                    lane_length = LANE_LENGTHS[lane_id]
-                    density = (occupancy / 100) * (1000 / lane_length)
+                print(lane_id)
+                print(type(interval))
+                print(interval)
+                if interval.get('id') == lane_id:
+                    if interval is not None:
+                        flow = float(interval.get("flow", 0))
+                        occupancy = float(interval.get("occupancy", 0))
+                        
+                        # Convert occupancy (%) to vehicle density (vehicles/km)
+                        lane_length = LANE_LENGTHS[lane_id]
+                        density = (occupancy / 100) * (1000 / lane_length)
 
-                    data[lane]["flow_rate"].append(flow)
-                    data[lane]["density"].append(density)
+                        data[lane]["flow_rate"].append(flow)
+                        data[lane]["density"].append(density)
 
     # Compute averages per direction
     results = {}
+    print(data)
     for direction, values in data.items():
         avg_flow = sum(values["flow_rate"]) / len(values["flow_rate"]) if values["flow_rate"] else 0
         avg_density = sum(values["density"]) / len(values["density"]) if values["density"] else 0
