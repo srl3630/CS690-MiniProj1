@@ -53,7 +53,9 @@ def parse_detector_output(file):
     for direction, values in data.items():
         avg_flow = sum(values["flow_rate"]) / len(values["flow_rate"]) if values["flow_rate"] else 0
         avg_density = sum(values["density"]) / len(values["density"]) if values["density"] else 0
-        results[direction] = {"avg_flow": avg_flow, "avg_density": avg_density}
+        distances = [LANE_LENGTHS[LANE_GROUPS[direction][0]]*2 / (density or avg_density) for density in values["density"]]
+        avg_distance = (sum(distances) / len(distances)) if distances else 0 
+        results[direction] = {"avg_flow": avg_flow, "avg_density": avg_density, "avg_distance": avg_distance}
 
     return results
 
@@ -108,9 +110,9 @@ def extract_and_save_traffic_data():
         for direction in LANE_GROUPS:
             avg_flow = detector_results.get(direction, {}).get("avg_flow", 0)
             avg_density = detector_results.get(direction, {}).get("avg_density", 0)
-            #avg_distance = tripinfo_results.get(direction, 0)
+            avg_distance = detector_results.get(direction, {}).get("avg_distance", 0)
 
-            writer.writerow([direction, avg_flow, avg_density,]) # add avg_distance
+            writer.writerow([direction, avg_flow, avg_density, avg_distance]) # add avg_distance
 
     print(f"Traffic data saved to {output_csv}")
 
