@@ -18,6 +18,13 @@ LANE_LENGTHS = {
     "wb_1": 109, "wb_2": 109
 }
 
+LANE_IDS = {
+    "nb_1": "-14026336#4_0", "nb_2": "-14026336#3_0",
+    "sb_1": "14026336#3_0", "sb_2": "14026336#4_0",
+    "eb_1": "683047946#5_0", "eb_2": "683047946#6_0",
+    "wb_1": "-683047946#6_0", "wb_2": "-683047946#5_0"
+}
+
 def parse_detector_output(file):
     """Extract flow rate and density from detector_output.xml per lane"""
     tree = ET.parse(file)
@@ -29,9 +36,6 @@ def parse_detector_output(file):
     for interval in root.findall("interval"):
         for lane in LANE_GROUPS:
             for lane_id in LANE_GROUPS[lane]:
-                print(lane_id)
-                print(type(interval))
-                print(interval)
                 if interval.get('id') == lane_id:
                     if interval is not None:
                         flow = float(interval.get("flow", 0))
@@ -46,7 +50,6 @@ def parse_detector_output(file):
 
     # Compute averages per direction
     results = {}
-    print(data)
     for direction, values in data.items():
         avg_flow = sum(values["flow_rate"]) / len(values["flow_rate"]) if values["flow_rate"] else 0
         avg_density = sum(values["density"]) / len(values["density"]) if values["density"] else 0
@@ -69,7 +72,7 @@ def parse_tripinfo(file):
 
             # Assign trip to a direction based on its route
             for direction, lanes in LANE_GROUPS.items():
-                if any(lane in trip.get("id", "") for lane in lanes):
+                if any(LANE_IDS[lane] in [trip.get("departLane", ""), trip.get("arrivalLane", "")] for lane in lanes):
                     assigned_direction = direction
                     break
 
