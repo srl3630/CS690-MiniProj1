@@ -68,6 +68,9 @@
     <type id="railway.rail" priority="20" numLanes="1" speed="44.44" allow="rail" oneway="1"/>
     <type id="railway.subway" priority="18" numLanes="1" speed="27.78" allow="rail_urban" oneway="1"/>
     <type id="railway.tram" priority="17" numLanes="1" speed="13.89" allow="tram" oneway="1"/>
+    <additional>
+    <inductionLoop id="detector1" lane="edge_0_0" pos="50.0" freq="60" file="detector_output.xml"/>
+    </additional>
 
     <edge id=":133046331_0" function="internal">
         <lane id=":133046331_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.51" length="9.05" shape="758.67,9430.18 756.20,9430.43 754.41,9431.41 753.29,9433.12 752.84,9435.56"/>
