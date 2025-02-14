@@ -53,7 +53,7 @@ def parse_detector_output(file):
     for direction, values in data.items():
         avg_flow = sum(values["flow_rate"]) / len(values["flow_rate"]) if values["flow_rate"] else 0
         avg_density = sum(values["density"]) / len(values["density"]) if values["density"] else 0
-        distances = [LANE_LENGTHS[LANE_GROUPS[direction][0]]*2 / (density or avg_density) for density in values["density"]]
+        distances = [LANE_LENGTHS[LANE_GROUPS[direction][0]]*2 / (density or avg_density) for density in values["density"] if density != 0]
         avg_distance = (sum(distances) / len(distances)) if distances else 0 
         results[direction] = {"avg_flow": avg_flow, "avg_density": avg_density, "avg_distance": avg_distance}
 
@@ -92,7 +92,7 @@ def parse_detector_output(file):
 def extract_and_save_traffic_data():
     detector_file = "detector_output.xml"
     tripinfo_file = "tripinfo.xml"
-    output_csv = "traffic_data.csv"
+    output_csv = "LT_70_SAtrue.csv"
 
     if not os.path.exists(detector_file) or not os.path.exists(tripinfo_file):
         print("Error: Required output files not found. Run the SUMO simulation first.")

@@ -1,7 +1,7 @@
 <configuration>
 	<input>
 		<net-file value="lyons.net.xml"/>
-		<route-files value="lyons_Night.rou.xml"/>
+		<route-files value="sorted_lyons_Night.rou.xml"/>
 		<additional-files value="detectors.add.xml"/>
 	</input>
 	<output>
