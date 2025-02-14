@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-02-13 18:39:48 by Eclipse SUMO GUI Version 1.22.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Panda\OneDrive\Desktop\Sumo\CS690-MiniProj1\lyons\AM\lyons.net.xml"/>
+        <route-files value="C:\Users\Panda\OneDrive\Desktop\Sumo\CS690-MiniProj1\lyons\AM\routes.rou.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="C:\Users\Panda\OneDrive\Desktop\Sumo\CS690-MiniProj1\lyons\AM\tripinfo.xml"/>
+    </output>
+
+</sumoConfiguration>

@@ -3,4 +3,14 @@
 		<net-file value="lyons.net.xml"/>
 		<route-files value="routes.rou.xml"/>
 	</input>
+	 <output>
+        <tripinfo-output value="tripinfo.xml"/>
+    </output>
 </configuration>
+
+
+   
+
+
+   
+
