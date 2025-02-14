@@ -57,35 +57,35 @@ def parse_detector_output(file):
 
     return results
 
-def parse_tripinfo(file):
-    """Extract average inter-vehicular distance per direction"""
-    tree = ET.parse(file)
-    root = tree.getroot()
-
-    # Store results by direction
-    distance_data = {direction: [] for direction in LANE_GROUPS}
-
-    for trip in root.findall("tripinfo"):
-        if "routeLength" in trip.attrib:
-            route_length = float(trip.get("routeLength", 0))
-            assigned_direction = None
-
-            # Assign trip to a direction based on its route
-            for direction, lanes in LANE_GROUPS.items():
-                if any(LANE_IDS[lane] in [trip.get("departLane", ""), trip.get("arrivalLane", "")] for lane in lanes):
-                    assigned_direction = direction
-                    break
-
-            if assigned_direction:
-                distance_data[assigned_direction].append(route_length)
-
-    # Compute averages
-    results = {}
-    for direction, distances in distance_data.items():
-        avg_distance = sum(distances) / len(distances) if distances else 0
-        results[direction] = avg_distance
-
-    return results
+#def parse_tripinfo(file):
+#    """Extract average inter-vehicular distance per direction"""
+#    tree = ET.parse(file)
+#    root = tree.getroot()
+#
+#    # Store results by direction
+#    distance_data = {direction: [] for direction in LANE_GROUPS}
+#
+#    for trip in root.findall("tripinfo"):
+#        if "routeLength" in trip.attrib:
+#            route_length = float(trip.get("routeLength", 0))
+#            assigned_direction = None
+#
+#            # Assign trip to a direction based on its route
+#            for direction, lanes in LANE_GROUPS.items():
+#                if any(LANE_IDS[lane] in [trip.get("departLane", ""), trip.get("arrivalLane", "")] for lane in lanes):
+#                    assigned_direction = direction
+#                    break
+#
+#            if assigned_direction:
+#                distance_data[assigned_direction].append(route_length)
+#
+#    # Compute averages
+#    results = {}
+#    for direction, distances in distance_data.items():
+#        avg_distance = sum(distances) / len(distances) if distances else 0
+#        results[direction] = avg_distance
+#
+#    return results
 
 def extract_and_save_traffic_data():
     detector_file = "detector_output.xml"
@@ -98,7 +98,7 @@ def extract_and_save_traffic_data():
 
     # Extract data
     detector_results = parse_detector_output(detector_file)
-    tripinfo_results = parse_tripinfo(tripinfo_file)
+    # tripinfo_results = parse_tripinfo(tripinfo_file)
 
     # Write to CSV
     with open(output_csv, mode="w", newline="") as file:
@@ -108,9 +108,9 @@ def extract_and_save_traffic_data():
         for direction in LANE_GROUPS:
             avg_flow = detector_results.get(direction, {}).get("avg_flow", 0)
             avg_density = detector_results.get(direction, {}).get("avg_density", 0)
-            avg_distance = tripinfo_results.get(direction, 0)
+            #avg_distance = tripinfo_results.get(direction, 0)
 
-            writer.writerow([direction, avg_flow, avg_density, avg_distance])
+            writer.writerow([direction, avg_flow, avg_density,]) # add avg_distance
 
     print(f"Traffic data saved to {output_csv}")
 
